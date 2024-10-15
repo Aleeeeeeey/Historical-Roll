@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GridManager : MonoBehaviour
@@ -5,6 +6,8 @@ public class GridManager : MonoBehaviour
     [SerializeField] private int width, height;
     [SerializeField] private Tile tilePrefab;
     [SerializeField] private Transform cam;
+
+    private Dictionary<Vector2, Tile> tiles;
 
     private void Start()
     {
@@ -28,9 +31,21 @@ public class GridManager : MonoBehaviour
                 var isOffset = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0);
                 //Si se cumple lo de arriba, la tile spawnea como "offset"
                 spawnedTile.Init(isOffset);
+
+                tiles[new Vector2(x, y)] = spawnedTile;
             }
         }
         //Para que la camara se centre en el grid
         //cam.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, -10);
+    }
+
+    public Tile GetTileAtPosition(Vector2 pos)
+    {
+        if (tiles.TryGetValue(pos, out var tile))
+        {
+            return tile;
+        }
+
+        return null;
     }
 }

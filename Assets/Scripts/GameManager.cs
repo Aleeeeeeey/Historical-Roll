@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject reglasDeJuegoCanvas;
     public GameObject reglasCreacionPersonajeCanvas;
     public GameObject reglasLoreYDocsCanvas;
+    public GameObject chatCanvas;
 
     public GameObject subCanvases;
     public GameObject rCanvas;
@@ -115,5 +116,15 @@ public class GameManager : MonoBehaviour
     {
         DeactivateSubcanvases();
         fCanvas.SetActive(true);
+    }
+
+    public void ChatCanvasActivate()
+    {
+        chatCanvas.SetActive(true);
+    }
+
+    public void ChatCanvasDeactivate()
+    {
+        chatCanvas.SetActive(false);
     }
 }

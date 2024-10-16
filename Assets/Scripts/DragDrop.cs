@@ -9,9 +9,10 @@ public class DragDrop : MonoBehaviour
         //Se crea un vector para igualar la posicion del raton a la camara
         Vector3 screenPoint = Input.mousePosition;
         //Se establece una posicion fija en el eje z
-        screenPoint.z = 10.0f;
+        screenPoint.z = 9f;
         //Se iguala la posicion del raton a la camara, y se establece que la posicion del objeto sea la misma
         transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
+
     }
 
     public void OnMouseUp()

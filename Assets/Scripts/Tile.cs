@@ -30,7 +30,7 @@ public class Tile : MonoBehaviour
         //Si esta listo para crear un token, se crea en la posicion del tile seleccionado
         if (GameManager.Instance.isTokenReady == true)
         {
-            Instantiate(testToken, new Vector3(transform.position.x, transform.position.y, -8f), transform.rotation);
+            Instantiate(testToken, new Vector3(transform.position.x, transform.position.y, -1f), transform.rotation);
             GameManager.Instance.isTokenReady = false;
         }
     }

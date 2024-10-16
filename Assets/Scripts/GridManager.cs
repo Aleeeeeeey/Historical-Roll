@@ -32,20 +32,10 @@ public class GridManager : MonoBehaviour
                 //Si se cumple lo de arriba, la tile spawnea como "offset"
                 spawnedTile.Init(isOffset);
 
-                tiles[new Vector2(x, y)] = spawnedTile;
             }
         }
         //Para que la camara se centre en el grid
         //cam.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, -10);
     }
 
-    public Tile GetTileAtPosition(Vector2 pos)
-    {
-        if (tiles.TryGetValue(pos, out var tile))
-        {
-            return tile;
-        }
-
-        return null;
-    }
 }

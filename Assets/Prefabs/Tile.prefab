@@ -193,6 +193,8 @@ MonoBehaviour:
   offsetColor: {r: 0.497496, g: 1, b: 0.4669811, a: 1}
   spriteRenderer: {fileID: 3601704010638255777}
   highlight: {fileID: 2032560526047476452}
+  testToken: {fileID: 4460338081427128806, guid: c5c956b1a71658346870a9b83f6158ee, type: 3}
+  GameManager: {fileID: 0}
 --- !u!61 &4652296579590345099
 BoxCollider2D:
   m_ObjectHideFlags: 0

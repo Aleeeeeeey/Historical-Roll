@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public GameObject hCanvas;
     public GameObject fCanvas;
 
+    public bool isTokenReady = false;
+
 
     void Awake()
     {
@@ -126,5 +128,10 @@ public class GameManager : MonoBehaviour
     public void ChatCanvasDeactivate()
     {
         chatCanvas.SetActive(false);
+    }
+
+    public void PrepareToSpawnToken()
+    {
+        isTokenReady = true;
     }
 }
